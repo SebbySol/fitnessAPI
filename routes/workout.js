@@ -7,6 +7,6 @@ const auth = require("../auth");
 router.post("/addWorkout", auth, workoutController.addWorkout);
 
 // get workout
-router.get("/getMyWorkouts", auth, workoutController.getMyWorkouts);
+router.get("/getWorkouts", auth, workoutController.getWorkouts);
 
 module.exports = router;

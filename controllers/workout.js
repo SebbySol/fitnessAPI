@@ -14,7 +14,7 @@ module.exports.addWorkout = (req, res) => {
 };
 
 // Get My Workouts
-module.exports.getMyWorkouts = (req, res) => {
+module.exports.getWorkouts = (req, res) => {
   Workout.find({ userId: req.user.id })
     .then((workouts) => res.status(200).send({ workouts }))
     .catch((err) => res.status(500).send({ error: "Error in Find", details: err }));
